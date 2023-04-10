@@ -12,6 +12,8 @@ public class Document {
     private String name;
     private String creationDate;
 
+    private String email;
+
     public Document() {}
 
     Document(String name, String creationDate) {
@@ -26,6 +28,14 @@ public class Document {
 
     public String getName() {
         return this.name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getCreationDate() {

@@ -49,6 +49,7 @@ import org.springframework.web.bind.annotation.RestController;
                     .map(document -> {
                         document.setName(newDoc.getName());
                         document.setCreationDate(newDoc.getCreationDate());
+                        document.setEmail(newDoc.getEmail());
                         return repository.save(document);
                     })
                     .orElseGet(() -> {
