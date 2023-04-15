@@ -7,14 +7,14 @@ FROM node:18-alpine
 RUN mkdir -p /app
 
 # Set the /app directory as the working directory for any command that follows
-WORKDIR /app
+WORKDIR /usr/app
 
 # Copy the local app package and package-lock.json file to the container
 COPY package*.json ./
 
 # Copy local directories to the working directory of our docker image (/app)
-COPY ./src ./src
-COPY ./public ./public
+COPY ./build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
+
 
 # Install node packages, install serve, build the app, and remove dependencies at the end
 RUN npm install \
