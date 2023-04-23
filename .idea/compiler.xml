@@ -9,7 +9,7 @@
         <module name="documentApi" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="documentApi" target="11" />
     </bytecodeTargetLevel>
   </component>
