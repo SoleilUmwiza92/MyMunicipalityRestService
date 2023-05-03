@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:17-alpine
 VOLUME /tmp
 EXPOSE 8080
 ARG JAR_FILE=target/MyMunicipalityRestService-0.0.1-SNAPSHOT.jar
