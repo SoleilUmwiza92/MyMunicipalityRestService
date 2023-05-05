@@ -1,6 +1,6 @@
 package com.myMunicipality.documentApi;
 
-    import java.util.List;
+import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,11 +9,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
     @RestController
     public class DocumentController {
 
         private final DocumentRepository repository;
+
+
+        Logger logger = LogManager.getLogger();
 
         DocumentController(DocumentRepository repository) {
             this.repository = repository;
@@ -24,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
         // tag::get-aggregate-root[]
         @GetMapping("/document")
         List<Document> all() {
+            logger.info("Getting all document from repo");
             return repository.findAll();
         }
         // end::get-aggregate-root[]
