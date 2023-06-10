@@ -1,4 +1,4 @@
-package com.myMunicipality.documentApi;
+package com.myMunicipality.documentController;
 
 
 class DocumentNotFoundException extends RuntimeException{
