@@ -18,6 +18,13 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea\
+.idea/compiler.xml
+.idea/artifacts
+.idea/jarRepositories.xml
+.idea/modules.xml
+.idea/*.iml
+.idea/modules
 
 ### NetBeans ###
 /nbproject/private/

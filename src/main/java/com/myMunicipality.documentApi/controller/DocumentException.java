@@ -1,10 +1,10 @@
-package com.myMunicipality.documentController;
+package com.myMunicipality.documentApi.controller;
 
 
 class DocumentNotFoundException extends RuntimeException{
 
 
-    public DocumentNotFoundException(Long id) {
-            super("Could not find employee " + id);
+    public DocumentNotFoundException(String id) {
+            super("Could not find document " + id);
         }
 }

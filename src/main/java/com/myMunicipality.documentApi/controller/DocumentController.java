@@ -38,12 +38,12 @@ import org.apache.logging.log4j.LogManager;
 
         // Single item
 
-//        @GetMapping("/documents/{id}")
-//        Document one(@PathVariable Long id) {
-//
-//            return repository.findById(id)
-//                    .orElseThrow(() -> new DocumentNotFoundException(id));
-//        }
+        @GetMapping("/documents/{id}")
+        Document one(@PathVariable String id) {
+
+            return repository.findById(id)
+                    .orElseThrow(() -> new DocumentNotFoundException(id));
+        }
 
 //        @PutMapping("/documents/{id}")
 //        Document replaceEmployee(@RequestBody Document newDoc, @PathVariable Long id) {
